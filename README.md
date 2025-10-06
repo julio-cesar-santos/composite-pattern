@@ -3,22 +3,22 @@ classDiagram
     direction TB
 
     interface CarroParte {
-        +double getPeso()
+        +getPeso() double
     }
 
     class Peca {
         -String nome
         -double peso
         +Peca(String nome, double peso)
-        +double getPeso()
+        +getPeso() double
     }
 
     class ConjuntoDePecas {
         -String nome
         -List<CarroParte> partes
         +ConjuntoDePecas(String nome)
-        +void adicionarParte(CarroParte parte)
-        +double getPeso()
+        +adicionarParte(CarroParte parte) void
+        +getPeso() double
     }
 
     CarroParte <|.. Peca
